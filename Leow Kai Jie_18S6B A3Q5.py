@@ -16,7 +16,5 @@ while command != 'N':
         line = F.readline()
         print('%-15s%-18.1f%-8d'%(name,float(wage),int(hours)))     #print data on shell
 
-
-
     F.close()       #close file
     command= input('Do you want to continue: Y/N')

@@ -11,7 +11,7 @@ print(names)        #'final'
 '''
 
 #2D array
-'''
+
 numStuds = 3
 numTests = 2
 
@@ -20,13 +20,12 @@ for stud in range (0,numStuds):
     scores[stud] = [0]*numTests     #[[0,0],[0,0],[0,0]]
 
 print(scores)    
-'''
 
 #input scores and store in array,scores
 for stud in range(0,numStuds):
     print('\nStudent',stud+1)
     for test in range(0,numTests):
-        scores[stud][test] = int(input('Enter marks for test',str(test+1)+': ')
+        scores[stud][test] = int(input('Enter marks for test'+str(test+1)+': '))
 
 print()
 print(scores)
@@ -35,5 +34,5 @@ print(scores)
 for stud in range(0,numStuds):
     print('\nstudents',stud+1)
     for test in range(0,numTests):
-        print'Test ' + str(test+1)+': ' + str(scores[stud][test]),end='  ')
+        print('Test ' + str(test+1)+': ' + str(scores[stud][test]),end='  ')
     print()    
