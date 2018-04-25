@@ -11,7 +11,6 @@ print(names)        #'final'
 '''
 
 #2D array
-
 numStuds = 3
 numTests = 2
 
