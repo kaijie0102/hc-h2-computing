@@ -10,7 +10,7 @@ for i in range (3):
 print(names)        #'final'
 '''
 
-#2D array
+#2D arraydsafds
 numStuds = 3
 numTests = 2
 
