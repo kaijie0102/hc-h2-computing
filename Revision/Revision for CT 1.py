@@ -77,6 +77,7 @@ if choice == '3':
 '''            
     
 #!QN 3
+'''
 FILE_PATH = "C:\\Users\\leowk\\Desktop\\HCI computing\\H2-computing\\Text\\"
 
 length = []
@@ -113,17 +114,74 @@ for keys,values in nameDate.items():
         else:
             F1.write(values[number]+',')
                      
-        
-    
-    
-    
 print('Highest frequency is',maxFreq)
 print('Accessed by: ')
 for i in names:
     print(i)
 F1.close()
+'''
+
+#!QN 4
+def random():
+    import random
+    ranNum = random.randint(1,50)
+    #
+    print(ranNum)
     
+    tries = 0
+    success = False
+    number = int(input('Guess a number from 1 to 50: '))
     
+    while tries <= 6 and success == False:
+        if number == ranNum:
+            print('Congratulations!')
+            success = True
+            tries += 1
+            #
+            print(success,tries)
+        elif number < ranNum:
+            print('Too low')
+            tries += 1
+            number = int(input('Guess a number from 1 to 50: '))
+        elif number > ranNum:
+            print('Too high')
+            tries += 1
+            number = int(input('Guess a number from 1 to 50: '))
+    if tries == 7:
+        print('Sorry, you did not get it right. The answer is',ranNum)   
+
+def main():
+    game = {}
+    fail = 0
+
+    for games in range(1,11):
+        random()
+        if random() is False:
+            fail += 1
+        else:
+            for num in range (1,7):
+                game[num] = 0
+                if tries == num:
+                    game[num] += 1
+            
+
+
+
+
+    print('%-10s%-10s'%('NumGuess','NumGames'))
+    
+    for numb in range (1,7):
+        print('%-10d'%num)
+
+    keys , values = game.items()
+    keys.sort()
+    for key in keys:
+        print('%-10d'%game[key])
+
+
+    print('Unsuccessful games: ',fail)
+    
+main()
 
 
 

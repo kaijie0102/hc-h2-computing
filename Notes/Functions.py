@@ -59,6 +59,18 @@ def partC():
 def main():
     partC()
 main()
+'''
+
+def main():
+    count = 0 
+    for n in range(1,101):
+        count = 0 
+        while count <20:
+            if isPrime(n) == True:
+                print(n)
+                count += 1
+main()
+'''
 
 
         
