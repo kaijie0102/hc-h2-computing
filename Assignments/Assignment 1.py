@@ -35,7 +35,7 @@ diameter = 2 * rad
 circ = diameter * pi 
 
 
-#QN 4
+#!QN 4
 base = float(input('Base of triangle:'))
 height = float(input('Height of triangle'))
 area = base * height
