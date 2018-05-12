@@ -14,6 +14,7 @@ print(names)        #'final'
 numStuds = 3
 numTests = 2
 
+#! Set up 2D list
 scores = [0]*numStuds   #[0,0,0] --> 0 is standard integer when using an array of int
 for stud in range (0,numStuds):
     scores[stud] = [0]*numTests     #[[0,0],[0,0],[0,0]]

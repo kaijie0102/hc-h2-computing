@@ -84,7 +84,6 @@ while lineNo != 0:
 
 uWord = []      #make a list 
 
-
 F = open(FILE_PATH +'file.txt','r')        #open file and read file
 
 line = F.readline()

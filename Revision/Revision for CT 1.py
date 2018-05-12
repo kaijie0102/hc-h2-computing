@@ -122,7 +122,14 @@ F1.close()
 '''
 
 #!QN 4
-def random():
+game = {}
+fail = 0
+Sum = 0
+average = 0
+
+for num in range (1,7):
+    game[num] = 0
+for numGames in range(1,11):
     import random
     ranNum = random.randint(1,50)
     #
@@ -130,58 +137,48 @@ def random():
     
     tries = 0
     success = False
-    number = int(input('Guess a number from 1 to 50: '))
-    
-    while tries <= 6 and success == False:
+   
+    while tries < 6 and success == False:
+        number = int(input('Guess a number from 1 to 50: '))
+        tries += 1
+        
         if number == ranNum:
-            print('Congratulations!')
+            print('Congratulations!You got it in',tries,'trie(s)')
+            print()
             success = True
-            tries += 1
-            #
-            print(success,tries)
+            
         elif number < ranNum:
             print('Too low')
-            tries += 1
-            number = int(input('Guess a number from 1 to 50: '))
+            
+            
         elif number > ranNum:
             print('Too high')
-            tries += 1
-            number = int(input('Guess a number from 1 to 50: '))
-    if tries == 7:
-        print('Sorry, you did not get it right. The answer is',ranNum)   
 
-def main():
-    game = {}
-    fail = 0
-
-    for games in range(1,11):
-        random()
-        if random() is False:
-            fail += 1
-        else:
-            for num in range (1,7):
-                game[num] = 0
-                if tries == num:
-                    game[num] += 1
+    if success == False:
+        fail += 1
+        print('Sorry, you did not get it right. The answer is',ranNum)
+        print()
+    
+    else:
+        for key in game.keys():
+            if tries == key:
+                game[key] += 1
             
-
-
-
-
-    print('%-10s%-10s'%('NumGuess','NumGames'))
     
-    for numb in range (1,7):
-        print('%-10d'%num)
+print('%-10s%-10s'%('NumGuess','NumGames'))
+for key,value in game.items():
+    print('%-10s%-10s'%(key,value))
+    Sum += key*value
+    #
+    print(Sum)
+    print(fail)
+average = Sum/(10-fail)
 
-    keys , values = game.items()
-    keys.sort()
-    for key in keys:
-        print('%-10d'%game[key])
+
+print('Unsuccessful games:',fail)
+print('Avg num of tries for successful games:',average)
 
 
-    print('Unsuccessful games: ',fail)
-    
-main()
 
 
 
