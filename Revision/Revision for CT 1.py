@@ -169,9 +169,7 @@ print('%-10s%-10s'%('NumGuess','NumGames'))
 for key,value in game.items():
     print('%-10s%-10s'%(key,value))
     Sum += key*value
-    #
-    print(Sum)
-    print(fail)
+    
 average = Sum/(10-fail)
 
 
