@@ -8,22 +8,22 @@ def binSearch(A,n,key,low=0,high=-1):
     if A[mid] == key:
         return mid
     
-    if low == high :
+    if low == high :        #Object not in array
         return -1
              
     if A[mid] > key:
-        return binSearch(A,n,key,low,mid-1)
+        return binSearch(A,n,key,low,mid-1)     #Sublist 
     
     elif A[mid] < key:
         #print(mid+1,high)
-        return binSearch(A,n,key,mid+1,high)
+        return binSearch(A,n,key,mid+1,high)        #breaking into sublist
                                                                    
                            
 def main():
     print("Enter a list of 7 integers in order")
     #A = [1,2,3,4,5,7,8]
     
-    for i in range(7):
+    for i in range(7):      #making a list
         num = input("Enter an integer: ")
         A.append(num)
     print('A=',A)
