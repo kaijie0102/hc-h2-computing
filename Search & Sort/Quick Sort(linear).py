@@ -15,7 +15,7 @@ def QuickSort(List):
         left = 1
         right = len(List)-1
         #print(List)
-        while left < len(List) and List[left] <= pivot: 
+        while left < len(List)-1 and List[left] <= pivot: 
             left += 1       #*Select first number
         while List[right] > pivot:
             right -= 1      #*Select second number

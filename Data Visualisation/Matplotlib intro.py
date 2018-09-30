@@ -6,11 +6,12 @@ x2 = [1,2,3]
 y2 = [4,5,6]
 
 plt.plot(x,y,'yd-.',label='first graph')      #plot with symbols; bo for blue circle, r+ is red cross
-plt.plot(x2,y2,'m+:',label='second graph')
+plt.plot(x2,y2,'k*:',label='second graph')
 #plt.bar(x,y,color='green')
 """
 Type of graph: plot: line
                bar: bar graph
+               hist: histogram
                
 
 Colours : Red, Blue, Green, Cyan , Magenta, Yellow, Black (k), White

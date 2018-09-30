@@ -1,3 +1,4 @@
+#Start with first number, compare with the rest. Proceed to next number
 def sort(List,first,second):
     temp = List[first]
     List[first]= List[second]

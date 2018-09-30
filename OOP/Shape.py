@@ -4,7 +4,7 @@ class Shape:
     def __init__(self,name):
         self.name = name
         
-    def __str__(self):                  #! Use __str__ when you want to return a string when printing an object
+    def myname(self):                  #! Use __str__ when you want to return a string when printing an object
         return('I am '+ self.name)    
     
 class Quadrilateral(Shape):
@@ -33,8 +33,9 @@ class Circle(Shape):
          
 
 def main():
-    rect = Quadrilateral(3,4,'rectangle')
-    print(rect.__str__())       #using method of superclass 
+    # rect = Quadrilateral(3,4,'rectangle')
+    # print(rect.__str__())       #using method of superclass 
+
 #   print(rect.area())
 #   print(rect.perimeter())
 #    circle = Circle(1)
@@ -42,5 +43,9 @@ def main():
 #    print(Shape('abc'))
     #print(shape)
     #print(Circle(1))
+
+    shape = Shape('triangle')
+    print(shape)
+    
 
 main()

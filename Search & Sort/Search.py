@@ -2,6 +2,7 @@ def seqSearch(A, start, n , key):
     print(A,start,n,key)
     #search the n-element interger array A for match with key from start position
     #return index of key of -1 if key not found
+    #search from start to end
     i = start - 1
     found = False
 

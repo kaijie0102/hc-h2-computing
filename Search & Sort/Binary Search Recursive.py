@@ -1,6 +1,6 @@
-def binSearch(A,n,key,low=0,high=-1):
+def binSearch(A,n,key,low=0,high=-1):   #A is list, n is len of list,key is item to find
     
-    if high == -1:
+    if high == -1:      #first time 
         high = n-1
         
         
@@ -8,7 +8,7 @@ def binSearch(A,n,key,low=0,high=-1):
     if A[mid] == key:
         return mid
     
-    if low == high :        #Object not in array
+    if low == high :        #Object not in array, after checking that the last number is not key
         return -1
              
     if A[mid] > key:
