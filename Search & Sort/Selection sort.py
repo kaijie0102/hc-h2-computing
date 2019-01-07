@@ -1,4 +1,4 @@
-#Start with first number, compare with the rest. Proceed to next number
+#Start with first number, compare with the rest, find the one that is smallest in list. Proceed to next number
 def sort(List,first,second):
     temp = List[first]
     List[first]= List[second]
