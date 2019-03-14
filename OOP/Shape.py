@@ -24,9 +24,9 @@ class Quadrilateral(Shape):
         return perimeter
 
 class Circle(Shape):
-    def __init__(self,radius):
+    def __init__(self,,name,radius):
         self.radius = radius
-
+        super().__init__(name)
     def __str__(self):
         area = pi * (self.radius**2)
         return('The area is {0}, my name is{1} '.format(str(area),self.name))
